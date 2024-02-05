@@ -9,7 +9,7 @@ const studentInfo = document.querySelector("#studentInfo");
 
 // Fetching student data from json file by using fetch method
 function fetchGradeData() {
-  return fetch("../grade.json")
+  return fetch("../studentInfo.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");
