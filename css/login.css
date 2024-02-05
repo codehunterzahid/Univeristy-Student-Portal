@@ -148,3 +148,137 @@ tr:hover {
   margin-left: 0;
   cursor: pointer;
 }
+
+/* Base Styles (for all resolutions) */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Media Query: Small screens (phones) */
+@media only screen and (max-width: 600px) {
+  .home {
+    flex-direction: column;
+    height: 90vh;
+  }
+
+  .logo {
+    margin-bottom: 2rem;
+  }
+
+  .portal {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  p,
+  input,
+  label {
+    width: 100%;
+  }
+
+  .my-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .copyright {
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+}
+
+/* Media Query: Medium screens (401px to 480px) */
+@media only screen and (min-width: 401px) and (max-width: 480px) {
+  .home {
+    height: 100vh;
+  }
+
+  .logo {
+    margin-bottom: 1.5rem;
+  }
+
+  .portal {
+    width: 100%;
+    padding: 2.5rem;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .logo {
+    max-width: 320px;
+  }
+
+  p,
+  input,
+  label {
+    width: 80%;
+  }
+
+  .my-btn {
+    width: 80%;
+    margin-top: 1rem;
+  }
+
+  .copyright {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+}
+
+/* Media Query: Large screens (481px to 768px) */
+@media only screen and (min-width: 481px) and (max-width: 780px) {
+  .home {
+    height: 100vh;
+  }
+
+  .logo {
+    margin-bottom: 2rem;
+  }
+
+  .portal {
+    width: 60%;
+    padding: 3rem;
+  }
+
+  .image {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .logo {
+    max-width: 350px;
+  }
+
+  p,
+  input,
+  label {
+    width: 60%;
+  }
+
+  .my-btn {
+    width: 60%;
+    margin-top: 1rem;
+  }
+
+  .copyright {
+    padding-left: 30px;
+    padding-top: 30px;
+  }
+}
