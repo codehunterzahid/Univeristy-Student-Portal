@@ -42,6 +42,31 @@ p {
   opacity: 0.8;
 }
 
+.password-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.17);
+  border-radius: 5px;
+  padding-right: 10px;
+}
+
+#password{
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+#registeration-id{
+  box-shadow: none;
+}
+
+
 input {
   width: 20%;
 }

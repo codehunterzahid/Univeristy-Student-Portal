@@ -6,6 +6,7 @@ const submitBtn = document.querySelector(".my-btn");
 const detailTable = document.querySelector("#detailsTable");
 const detailBody = document.querySelector("#detailsBody");
 const studentInfo = document.querySelector("#studentInfo");
+const openEye = document.querySelector("#openEye");
 
 // Fetching student data from json file by using fetch method
 function fetchGradeData() {
@@ -53,6 +54,20 @@ submitBtn.addEventListener("click", (event) => {
   });
   
 });
+
+// function for hide password and show password
+openEye.addEventListener("click", ()=>{
+  if(password.type === "password"){
+    password.type = "text";
+    openEye.classList.add("fa-eye-slash");
+    openEye.classList.remove("fa-eye");
+  }else{
+    password.type = "password";
+    openEye.classList.add("fa-eye");
+    openEye.classList.remove("fa-eye-slash");
+  }
+})
+
 
 function displayStudentDetails(student) {
   detailBody.innerHTML = "";
