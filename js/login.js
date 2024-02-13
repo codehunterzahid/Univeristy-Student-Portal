@@ -33,8 +33,8 @@ submitBtn.addEventListener("click", (event) => {
   fetchGradeData().then((data) => {
     const student = data["student-data"].find(
       (student) =>
-        student["Registration ID"] === parseInt(regId.value) &&
-        student["password"] === parseInt(password.value)
+        student["Registration ID"].toLowerCase() === regId.value.toLowerCase() &&
+        student["password"] === password.value
     );
 
     if (student) {
