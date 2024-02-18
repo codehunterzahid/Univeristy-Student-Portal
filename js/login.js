@@ -38,6 +38,7 @@ submitBtn.addEventListener("click", (event) => {
         student["password"] === password.value
     );
 
+
     if (student) {
         regId.value = "";
       password.value = "";
