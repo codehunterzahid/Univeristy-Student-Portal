@@ -25,22 +25,20 @@ function fetchGradeData() {
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
-  if(!adp.checked){
+  if (!adp.checked) {
     alert("Only for Section A");
     return;
   }
 
-
   fetchGradeData().then((data) => {
     const student = data["student-data"].find(
       (student) =>
-        student["Registration ID"].toLowerCase() === regId.value.toLowerCase() &&
-        student["password"] === password.value
+        student["Registration ID"].toLowerCase() ===
+          regId.value.toLowerCase() && student["password"] === password.value
     );
 
-
     if (student) {
-        regId.value = "";
+      regId.value = "";
       password.value = "";
 
       // Display student details
@@ -48,27 +46,24 @@ submitBtn.addEventListener("click", (event) => {
 
       // Scroll to the result section
       scrollToSection();
-      
     } else {
       alert("Invalid Registration ID or Password");
     }
   });
-  
 });
 
 // function for hide password and show password
-openEye.addEventListener("click", ()=>{
-  if(password.type === "password"){
+openEye.addEventListener("click", () => {
+  if (password.type === "password") {
     password.type = "text";
     openEye.classList.add("fa-eye-slash");
     openEye.classList.remove("fa-eye");
-  }else{
+  } else {
     password.type = "password";
     openEye.classList.add("fa-eye");
     openEye.classList.remove("fa-eye-slash");
   }
-})
-
+});
 
 function displayStudentDetails(student) {
   detailBody.innerHTML = "";
@@ -109,11 +104,12 @@ function displayStudentDetails(student) {
 }
 
 function scrollToSection() {
-    document.querySelector("#detailsTable").scrollIntoView({ behavior: "smooth" });
-  }
-  
-submitBtn.addEventListener("click", scrollToSection);
+  document
+    .querySelector("#detailsTable")
+    .scrollIntoView({ behavior: "smooth" });
+}
 
+submitBtn.addEventListener("click", scrollToSection);
 
 /* to download the result
 const downloadBtn = document.getElementById("downloadBtn");
@@ -137,20 +133,19 @@ downloadBtn.addEventListener("click", () => {
   // Hide the download button
   downloadBtn.style.display = "none";
 
-  html2canvas(tableElement).then(canvas => {
+  html2canvas(tableElement).then((canvas) => {
     // Restore the download button's visibility
     downloadBtn.style.display = "";
 
     const pdf = new jsPDF();
-    const imgData = canvas.toDataURL('image/png');
+    const imgData = canvas.toDataURL("image/png");
     const imgWidth = 210; // A4 width (in mm)
     const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-    pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-    pdf.save('result_card.pdf');
+    pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
+    pdf.save("result_card.pdf");
   });
 
   // Prevent the default link behavior
   event.preventDefault();
 });
-
