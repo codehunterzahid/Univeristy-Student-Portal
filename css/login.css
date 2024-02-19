@@ -42,7 +42,7 @@ p {
   opacity: 0.8;
 }
 
-.password-input{
+.password-input {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,7 @@ p {
   padding-right: 10px;
 }
 
-#password{
+#password {
   border: none;
   outline: none;
   width: 100%;
@@ -62,10 +62,9 @@ p {
   box-shadow: none;
 }
 
-#registeration-id{
+#registeration-id {
   box-shadow: none;
 }
-
 
 input {
   width: 20%;
@@ -87,7 +86,6 @@ label {
   color: white;
   margin-bottom: 10px;
 }
-
 
 .copyright {
   opacity: 0.7;
